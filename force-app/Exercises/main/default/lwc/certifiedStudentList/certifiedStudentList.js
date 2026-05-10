@@ -3,6 +3,7 @@ import getCertifiedStudents from "@salesforce/apex/CertifiedStudentList.getCerti
 import deleteStudentCertification from "@salesforce/apex/CertifiedStudentList.deleteStudentCertification";
 import { refreshApex } from "@salesforce/apex";
 import Utils from "c/utils";
+import LightningConfirm from "lightning/confirm";
 
 export default class CertifiedStudentList extends LightningElement {
   @api certificationId = 0;
@@ -80,16 +81,26 @@ export default class CertifiedStudentList extends LightningElement {
         break;
     }
   }
-  handleDelete() {
-    const certificationHeldIds = this.getSelectedIDs();
-    deleteStudentCertification({ certificationHeldIds })
-      .then(() => {
-        refreshApex(this._wiredStudentResult);
-      })
-      .catch((error) => {
-        this.error = error;
-      });
-  }
+  
+  async handleDelete() {
+		const result = await LightningConfirm.open({
+			message: "Are you sure you want to delete?",
+			variant: "header",
+			label: "Delete Confirmation Required",
+			theme: "warning"
+		});
+    
+		if (result) {
+			const certificationHeldIds = this.getSelectedIDs();
+			deleteStudentCertification({ certificationHeldIds })
+				.then(() => {
+					refreshApex(this._wiredStudentResult);
+				})
+				.catch((error) => {
+					this.error = error;
+				});
+		}
+	}
 
   notAvailable() {
     Utils.showModal(
