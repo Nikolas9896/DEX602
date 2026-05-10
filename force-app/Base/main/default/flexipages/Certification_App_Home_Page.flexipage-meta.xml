@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance><identifier>Id1001</identifier>
+                <componentName>challenge_contactDirectory</componentName>
+            </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         <name>top</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance><identifier>Id1001</identifier>
+            <componentInstance><identifier>Id1002</identifier>
                 <componentName>propsDemo</componentName>
             </componentInstance>
         </itemInstances>
@@ -17,7 +22,7 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance><identifier>Id1002</identifier>
+            <componentInstance><identifier>Id1003</identifier>
                 <componentName>challenge_currentDateTime</componentName>
             </componentInstance>
         </itemInstances>
@@ -27,7 +32,7 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance><identifier>Id1003</identifier>
+            <componentInstance><identifier>Id1004</identifier>
                 <componentName>challenge_recentDeliveries</componentName>
             </componentInstance>
         </itemInstances>
