@@ -2,9 +2,8 @@
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance>
+            <componentInstance><identifier>Id1001</identifier>
                 <componentName>challenge_contactDirectory</componentName>
-                <identifier>Id1001</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -13,9 +12,8 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance>
+            <componentInstance><identifier>Id1002</identifier>
                 <componentName>propsDemo</componentName>
-                <identifier>Id1002</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -30,9 +28,8 @@
             </componentInstance>
         </itemInstances>
         <itemInstances>
-            <componentInstance>
+            <componentInstance><identifier>Id1003</identifier>
                 <componentName>challenge_currentDateTime</componentName>
-                <identifier>Id1003</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -41,9 +38,17 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance>
+            <componentInstance><identifier>Id1004</identifier>
                 <componentName>challenge_recentDeliveries</componentName>
-                <identifier>Id1004</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance><identifier>Id1005</identifier>
+                <componentInstanceProperties>
+                    <name>analyticsUrl</name>
+                    <value>https://lwcdata.herokuapp.com/jsondata</value>
+                </componentInstanceProperties>
+                <componentName>challenge_lineChart</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
