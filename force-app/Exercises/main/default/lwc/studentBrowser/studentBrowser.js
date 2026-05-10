@@ -61,6 +61,12 @@ export default class StudentBrowser extends NavigationMixin(LightningElement) {
 			}
 		});
 	}
+
+	handleRowClick(event) {
+		let studentId = event.detail.pk;
+		this.updateSelectedStudent(studentId);
+	}
+	
 	
 	
 }
