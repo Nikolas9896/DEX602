@@ -15,8 +15,16 @@
 				<!-- Deliveries drop-down -->
 				<lightning-layout-item padding="around-small" size="4">
 					<lightning-combobox name="deliverySelector" label="Select Delivery" variant="label-hidden"
-						value={selectedDeliveryId} placeholder="Select a delivery" options={deliveries} onchange={handleDeliveryChange}>
+						value={selectedDeliveryId} placeholder="Select a delivery" options={deliveries}
+						onchange={handleDeliveryChange}>
 					</lightning-combobox>
+				</lightning-layout-item>
+
+				<!-- Add New Delivery button (enabled if instructor selected)-->
+				<lightning-layout-item padding="around-small">
+					<lightning-button variant="brand" disabled={isButtonDisabled} label="Add New Delivery"
+						onclick={handleAddNewDelivery}>
+					</lightning-button>
 				</lightning-layout-item>
 
 			</lightning-layout>
