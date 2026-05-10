@@ -2,13 +2,11 @@
 	"orgName": "AW Computing",
 	"edition": "Developer",
     "settings": {
-        "userManagementSettings": {
-             "enableNewProfileUI": true 
-        },
         "lightningExperienceSettings": {
-			"enableS1DesktopEnabled": true
+            "enableS1DesktopEnabled": true
         },
         "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
         },
         "languageSettings": {
             "enableTranslationWorkbench": true
