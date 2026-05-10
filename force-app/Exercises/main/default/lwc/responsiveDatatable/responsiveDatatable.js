@@ -16,6 +16,14 @@ export default class ResponsiveDatatable extends LightningElement {
 			this.rows = this.reformatRows(value);
 		} 
 	}
+
+	@api setSelectedRecord(recordId) {
+		let mySelector = `tr[data-pk='${recordId}']`;
+		let selectedRow = this.template.querySelector(mySelector);
+		if (selectedRow) {
+			this.highlightSelectedRow(selectedRow);
+		}
+	}
 	
 	reformatRows = function(rowData) {
 		let colItems = this.columnConfig;
@@ -33,6 +41,7 @@ export default class ResponsiveDatatable extends LightningElement {
 					label: colItems[j].label,
 					type: colItems[j].type,
 					class: colClass,
+					columnId: 'col' + j + '-' + rowData[i][this.pkField],
 					isPhone: (colItems[j].type==='phone'),
 					isEmail: (colItems[j].type==='email'),
 					isOther: (colItems[j].type!=='phone' && colItems[j].type!=='email')
