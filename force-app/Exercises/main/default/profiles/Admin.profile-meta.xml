@@ -16,6 +16,14 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AwNavigation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CertifiedStudentList</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CourseAttendeeTriggerHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
