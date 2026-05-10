@@ -1,8 +1,6 @@
 <template>
-		
-		<!-- TODO #7: Use the cardTitle getter to display a dynamic title for the lightning-card -->
-		<lightning-card title={cardTitle} >
-				
+		<lightning-card lwc:if={studentId} title={cardTitle}>
+			
 			<template lwc:if={wiredStudent.error}>
 				<div class="slds-var-p-horizontal_medium">
 					<c-error-panel type="inlineMessage" errors={wiredStudent.error}></c-error-panel>
@@ -10,8 +8,13 @@
 			</template>
 
 			<template lwc:if={wiredStudent.data}>
+				<!-- this will be filled out during the lab -->
+				<lightning-button slot="actions" label="Go to record" onclick={handleGoToRecord}>
+				</lightning-button>
 				<div class="slds-var-p-horizontal_medium">
-					<!-- this will be filled out during the lab -->
+					<p><lightning-formatted-email value={email}></lightning-formatted-email></p>
+					<p><lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
+					<p>{description}</p>
 				</div>
 			</template>
 			
