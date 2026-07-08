@@ -21,7 +21,8 @@
                     variant="label-hidden"
                     value={selectedDeliveryId}
                     placeholder="Select a delivery"
-                    options={deliveries}>
+                    options={deliveries}
+                    onchange={handleDeliveryChange}>
                 </lightning-combobox>
             </lightning-layout-item>
         </lightning-layout>
