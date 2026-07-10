@@ -39,27 +39,6 @@
         <name>bottomRight</name>
         <type>Region</type>
     </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>challenge_recentDeliveries</componentName>
-                <identifier>Id1004</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>analyticsUrl</name>
-                    <value>https://lwcdata.herokuapp.com/jsondata</value>
-                </componentInstanceProperties>
-                <componentName>challenge_lineChart</componentName>
-                <identifier>Id1005</identifier>
-            </componentInstance>
-        </itemInstances>
-        <mode>Replace</mode>
-        <name>sidebar</name>
-        <type>Region</type>
-    </flexiPageRegions>
     <masterLabel>Certification App Home Page</masterLabel>
     <parentFlexiPage>home__desktopDefault</parentFlexiPage>
     <template>
