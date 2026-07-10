@@ -26,6 +26,7 @@ export default class TripReportFormAdvanced extends LightningElement {
 
 	error;
 	_editorInitialized;
+	saveButtonDisabled = true;
 
 	@api recordId;
 	
@@ -162,5 +163,11 @@ export default class TripReportFormAdvanced extends LightningElement {
 		}
 		
 	}
-
+	validateFields() {
+		const fields =	Array.from(this.template.querySelectorAll('.validateMe'));
+		return fields.every((currentField) => currentField.checkValidity());
+	}
+	handleBlur() {
+		this.saveButtonDisabled = !this.validateFields();
+	}
 }
