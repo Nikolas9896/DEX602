@@ -1,22 +1,23 @@
 public with sharing class StudentBrowserForm {
-    @AuraEnabled(cacheable=true)
-    public static List<User> getInstructors() {
-        
+    
+	@AuraEnabled(cacheable=true)
+	public static List<User> getInstructors() {
 		return [SELECT Id, Name FROM User WHERE Is_Instructor__c = true ORDER BY Name];
+	}
 
-    }
-
-    @AuraEnabled(cacheable=true)
-    public static List<Course_Delivery__c> getDeliveriesByInstructor(String instructorId ) {
-        if (String.isEmpty(instructorId)) {
+	@AuraEnabled(cacheable=true)
+	public static List<Course_Delivery__c> getDeliveriesByInstructor(String instructorId ) {
+		if (String.isEmpty(instructorId)) {
 			return new List<Course_Delivery__c>();
 		} else {
 			return [
 				SELECT Id, Start_Date__c, Location__c, Attendee_Count__c
 				FROM Course_Delivery__c
-				WHERE Instructor__c = :instructorId AND Status__c IN ('Enrolled','Completed','Delivered','Scheduled')
+				WHERE Instructor__c = :instructorId AND Status__c IN ('Enrolled','Completed','Delivered','Scheduled') AND Attendee_Count__c != 0
+				WITH USER_MODE
 				ORDER BY Start_Date__c DESC
 			];
 		}
-    }
+	}
+
 }

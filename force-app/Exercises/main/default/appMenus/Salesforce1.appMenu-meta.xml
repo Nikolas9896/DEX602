@@ -5,12 +5,12 @@
         <type>StandardAppMenuItem</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Delivery_Map</name>
-        <type>CustomTab</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>Feed</name>
         <type>StandardAppMenuItem</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Deliveries_Map</name>
+        <type>CustomTab</type>
     </appMenuItems>
     <appMenuItems>
         <name>MyDay</name>
@@ -50,10 +50,6 @@
     </appMenuItems>
     <appMenuItems>
         <name>PendingInterviews</name>
-        <type>StandardAppMenuItem</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>MobileHome</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
 </AppMenu>

@@ -4,22 +4,23 @@ public with sharing class StudentBrowser {
         String query = '';
         String scheckStatus = 'Status__c IN (\'Enrolled\', \'Completed\') ';
         String recordTypeFilter = ' RecordType.Name = \'Technician\' ';
-
-		//Base query
+                
+        //Base query
         query += 'SELECT Id, Name, Email, Phone, Title, Account.Name, PhotoUrl FROM Contact ';
-		if (String.isNotEmpty(courseDeliveryId)) {
+        if (String.isNotEmpty(courseDeliveryId)) {
             //Add delivery Id
-			query += 'WHERE Id IN (SELECT Student__c FROM course_attendee__c WHERE course_delivery__c = :courseDeliveryId AND ' + scheckStatus + ') AND ' + recordTypeFilter + ' ';
-		} else if (String.isNotEmpty(instructorId)) {
+            query += 'WHERE Id IN (SELECT Student__c FROM course_attendee__c WHERE course_delivery__c = :courseDeliveryId AND ' + scheckStatus + ') AND ' + recordTypeFilter + ' ';
+        } else if (String.isNotEmpty(instructorId)) {
             //Add instructor Id
             query += 'WHERE Id IN (SELECT Student__c FROM course_attendee__c WHERE course_delivery__r.Instructor__c = :instructorId AND ' + scheckStatus + ') AND ' + recordTypeFilter + ' ';
         } else if (String.isNotEmpty(recordTypeFilter)) {
-			//Only record type filter for valid RecordType
+            //Only record type filter for valid RecordType
             query += 'WHERE ' + recordTypeFilter + ' ' ;
         }
-		query += 'WITH USER_MODE ';
-		query += 'ORDER BY Name';
-		
-		return Database.query(query);
+        query += 'WITH USER_MODE ';
+        query += 'ORDER BY Name';
+
+        return Database.query(query);
+
     }
 }

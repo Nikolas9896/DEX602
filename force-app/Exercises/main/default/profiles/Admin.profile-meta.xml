@@ -11,11 +11,6 @@
         <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
-        <application>standard__Approvals</application>
-        <default>false</default>
-        <visible>true</visible>
-    </applicationVisibilities>
-    <applicationVisibilities>
         <application>standard__LightningSales</application>
         <default>false</default>
         <visible>true</visible>
@@ -26,6 +21,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AwNavigation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CertPopularity</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -45,6 +44,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Contacts</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ContactsData</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -54,6 +57,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CourseAttendeesData</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CourseDeliveries</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -82,6 +89,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>StudentBrowserForm</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TopStudentsByCertifications</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -391,10 +402,6 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>AWInstructors</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>AwInstructors_Cmp_Tab</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -415,8 +422,12 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>Delivery_Map</tab>
+        <tab>Deliveries_Map</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Delivery_Map</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>TripReport__c</tab>
