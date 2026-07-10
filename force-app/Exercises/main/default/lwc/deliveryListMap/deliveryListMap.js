@@ -6,7 +6,6 @@ export default class DeliveryListMap extends LightningElement {
 	@api markersTitle = 'Deliveries Worldwide';
 	@api listView='visible';
 
-
 	@wire(getLocations)
 	wired_getLocations({ error, data }) {
 		this.mapMarkers = [];

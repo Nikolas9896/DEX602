@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="deliveryDetailMap">
+=======
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+>>>>>>> Student
     <apiVersion>67.0</apiVersion>
     <isExposed>true</isExposed>
     <targets>
